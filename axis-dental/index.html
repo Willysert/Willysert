@@ -177,6 +177,9 @@ section { scroll-margin-top: 80px; }
 .info div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
 .info dt { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper-text); padding-top: 3px; }
 .info dd { margin: 0; overflow-wrap: anywhere; }
+.hours { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; font-variant-numeric: tabular-nums; }
+.hours + .hours { margin-top: 4px; }
+.map-link { display: inline-block; margin-top: 6px; font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper-text); }
 .form { background: var(--surface); padding: clamp(20px, 3vw, 40px); border-radius: var(--radius); display: grid; gap: 18px; border: 1px solid var(--line); }
 .form h3 { font-size: var(--step-1); }
 .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
@@ -244,7 +247,7 @@ section { scroll-margin-top: 80px; }
       <div class="hero-copy">
         <span class="label">Clínica dental · Tegucigalpa</span>
         <h1>Tu sonrisa, <em>en su eje</em>.</h1>
-        <p class="hero-lead">Estética dental, ortodoncia, implantes y odontología para toda la familia, en consultorios luminosos con vista a la ciudad.</p>
+        <p class="hero-lead">En Torre Agalta, Blvd. Morazán. Estética dental, ortodoncia, implantes y odontología para toda la familia, en consultorios luminosos con vista a la ciudad.</p>
         <div class="hero-actions">
           <a class="btn btn-solid js-wa" href="#contacto"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar por WhatsApp</a>
           <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
@@ -390,11 +393,10 @@ section { scroll-margin-top: 80px; }
       </div>
       <div class="contact-grid">
         <dl class="info">
-          <div><dt>Dirección</dt><dd><span class="ph">[Dirección de la clínica]</span>, Tegucigalpa, Honduras</dd></div>
-          <div><dt>Teléfono</dt><dd><span class="ph">[+504 0000-0000]</span></dd></div>
-          <div><dt>WhatsApp</dt><dd><span class="ph">[+504 0000-0000]</span></dd></div>
+          <div><dt>Dirección</dt><dd>Torre Agalta, Blvd. Morazán<br>Piso 10, Local 1024<br>Tegucigalpa, Honduras<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Torre+Agalta+Boulevard+Moraz%C3%A1n+Tegucigalpa" target="_blank" rel="noopener">Ver en Google Maps</a></dd></div>
+          <div><dt>Teléfono y WhatsApp</dt><dd>(+504) 8792-6121</dd></div>
           <div><dt>Correo</dt><dd><span class="ph">[correo@axisdental.hn]</span></dd></div>
-          <div><dt>Horario</dt><dd><span class="ph">[Lunes a viernes, 8:00 a. m. – 6:00 p. m.]</span><br><span class="ph">[Sábado, 8:00 a. m. – 12:00 m.]</span></dd></div>
+          <div><dt>Horario</dt><dd><span class="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 6:00 p. m.</span></span><span class="hours"><span>Sábado y domingo</span><span>10:00 a. m. – 3:00 p. m.</span></span></dd></div>
           <div><dt>Redes</dt><dd><span class="ph">[@axisdentalstudio]</span></dd></div>
         </dl>
         <form class="form" id="cita-form" novalidate>
@@ -409,7 +411,7 @@ section { scroll-margin-top: 80px; }
                 <option>Valoración general</option><option>Estética dental</option><option>Ortodoncia</option><option>Implantes</option><option>Limpieza</option><option>Urgencia</option>
               </select></div>
             <div class="field"><label for="f-horario">Horario preferido</label>
-              <select id="f-horario" name="horario"><option>Mañana</option><option>Tarde</option><option>Sábado</option></select></div>
+              <select id="f-horario" name="horario"><option>Mañana</option><option>Tarde</option><option>Fin de semana</option></select></div>
           </div>
           <div class="field"><label for="f-msg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje"></textarea></div>
           <button class="btn btn-solid" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preparar mensaje</button>
@@ -431,7 +433,7 @@ section { scroll-margin-top: 80px; }
       <span class="brand-bar" aria-hidden="true"></span>
       <span class="brand-name"><b>AXIS</b><small>DENTAL STUDIO</small></span>
     </a>
-    <p>© <span id="year">2026</span> Axis Dental Studio · Tegucigalpa, Honduras</p>
+    <p>© <span id="year">2026</span> Axis Dental Studio · Torre Agalta, Blvd. Morazán, piso 10, local 1024 · Tegucigalpa · (+504) 8792-6121</p>
   </div>
 </footer>
 
@@ -439,7 +441,7 @@ section { scroll-margin-top: 80px; }
 
 <script>
 /* Cambia este número (código de país + número, sin espacios ni +) para activar WhatsApp. */
-var WHATSAPP = "50400000000";
+var WHATSAPP = "50487926121";
 var WA_READY = !/^504?0+$/.test(WHATSAPP);
 
 function waLink(text) {
