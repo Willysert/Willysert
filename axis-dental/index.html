@@ -4,234 +4,248 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Axis Dental Studio</title>
-<meta name="description" content="Axis Dental Studio: estética dental, ortodoncia, implantes y odontología familiar en Tegucigalpa, Honduras.">
+<meta name="description" content="Axis Dental Studio: estética dental, ortodoncia, implantes y odontología familiar en Torre Agalta, Tegucigalpa, Honduras.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap">
 <style>
-/* Layout: señalética de clínica. Placas con la barra vertical del logo "| AXIS", texto a la izquierda, fotos reales a la derecha, ritmo de puertas "CLÍNICA | 1". */
+/* Layout: portada a pantalla completa con el menú encima, tarjetas de vidrio sobre foto difuminada, iconos en círculos y bloques salvia redondeados. Solo tema claro. */
 :root {
-  --paper: #f6f7f7;      /* pared blanca fría de las fotos */
-  --surface: #ffffff;
-  --mist: #e7ecec;       /* reflejo verde-agua del vidrio */
-  --ink: #161616;        /* uniformes y encimera negros */
-  --muted: #59625f;
-  --copper: #b27b56;     /* letras del logo en oro rosa */
-  --copper-text: #8a5735;/* cobre con contraste AA sobre blanco */
-  --line: #d9dfde;
-  --on-ink: #f6f2ee;
-  --font-display: "Marcellus", "Cormorant Garamond", Georgia, serif;
-  --font-body: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
-  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
-  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
-  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.3rem);
-  --step-3: clamp(2.3rem, 1.7rem + 3vw, 4.4rem);
-  --radius: 4px;
+  --white: #ffffff;
+  --shell: #f6f3ee;      /* blanco cálido de fondo */
+  --sage: #5b7370;       /* gris verdoso de los bloques (texto blanco AA) */
+  --sage-soft: #e5ebe9;
+  --ink: #1d2524;
+  --muted: #56605e;
+  --gold: #c9a274;       /* botones dorados, como el logo */
+  --gold-deep: #8a5d3b;  /* cobre para textos pequeños sobre claro */
+  --gold-light: #f0d9bd; /* dorado claro sobre fondos oscuros */
+  --on-gold: #2b1d10;
+  --line: #dcd6cd;
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --step--1: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);
+  --step-0: clamp(0.98rem, 0.94rem + 0.2vw, 1.06rem);
+  --step-1: clamp(1.45rem, 1.3rem + 0.7vw, 1.85rem);
+  --step-2: clamp(2rem, 1.6rem + 1.9vw, 3.1rem);
+  --step-3: clamp(2.7rem, 1.8rem + 4.6vw, 5.6rem);
+  --r-lg: clamp(20px, 3vw, 36px);
+  --r-md: 18px;
   --gutter: clamp(16px, 4vw, 48px);
+  --shadow: 0 18px 50px -24px rgba(29, 37, 36, .35);
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #111312; --surface: #191c1b; --mist: #222827; --ink: #f1eee9; --muted: #a4aca9;
-    --copper: #d0a07c; --copper-text: #d9ad8b; --line: #2e3533; --on-ink: #141414; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #111312; --surface: #191c1b; --mist: #222827; --ink: #f1eee9; --muted: #a4aca9;
-  --copper: #d0a07c; --copper-text: #d9ad8b; --line: #2e3533; --on-ink: #141414; color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); font-weight: 300; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); font-weight: 400; line-height: 1.7; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
 a { color: inherit; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: 0.005em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.1; margin: 0; text-wrap: balance; }
 p { margin: 0; }
-:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
 .wrap { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: var(--gutter); }
-.label { font-size: var(--step--1); font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--copper-text); }
-.ph { border-bottom: 1px dashed var(--copper); }
-.btn { display: inline-flex; align-items: center; gap: 0.6em; padding: 0.9em 1.5em; border-radius: var(--radius); font: 500 var(--step--1)/1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--ink); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
-.btn-solid { background: var(--ink); color: var(--paper); }
-.btn-solid:hover { background: var(--copper); border-color: var(--copper); color: #fff; }
-.btn-ghost { background: transparent; color: var(--ink); }
-.btn-ghost:hover { border-color: var(--copper); color: var(--copper-text); }
-.btn svg { width: 1.2em; height: 1.2em; flex: none; }
+.eyebrow { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-deep); }
+.ph { border-bottom: 1px dashed var(--gold); }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6em; min-height: 48px; padding: 0.85em 1.8em; border-radius: 999px; font: 600 var(--step--1)/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: background .25s, color .25s, border-color .25s, transform .25s; }
+.btn svg { width: 1.25em; height: 1.25em; flex: none; }
+.btn-gold { background: var(--gold); color: var(--on-gold); box-shadow: 0 10px 24px -12px rgba(138, 93, 59, .7); }
+.btn-gold:hover { background: #d8b58b; transform: translateY(-1px); }
+.btn-line { border-color: currentColor; color: var(--ink); background: transparent; }
+.btn-line:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.btn-light { border-color: rgba(255,255,255,.7); color: var(--white); }
+.btn-light:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
+.more { display: inline-flex; align-items: center; gap: 6px; font-size: var(--step--1); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--gold-deep); }
+.more::after { content: "→"; transition: transform .2s; }
+a:hover .more::after, .more:hover::after { transform: translateX(4px); }
 
 /* Logo */
-.brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: var(--copper); }
+.brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: var(--white); transition: color .3s; }
 .brand-mark { width: 62px; height: 40px; flex: none; }
-.brand-bar { width: 1px; align-self: stretch; background: var(--copper); }
+.brand-bar { width: 1px; align-self: stretch; background: currentColor; opacity: .8; }
 .brand-name { display: grid; line-height: 1; }
-.brand-name b { font: 400 1.5rem/1 var(--font-body); letter-spacing: 0.52em; margin-right: -0.52em; }
-.brand-name small { font: 500 0.55rem/1 var(--font-body); letter-spacing: 0.32em; margin-top: 7px; }
+.brand-name b { font: 500 1.45rem/1 var(--font-body); letter-spacing: 0.5em; margin-right: -0.5em; }
+.brand-name small { font: 600 0.52rem/1 var(--font-body); letter-spacing: 0.3em; margin-top: 7px; }
 
-/* Header */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 14px; }
-.nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 34px); }
-.nav a:not(.btn) { font-size: var(--step--1); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
-.nav a:not(.btn):hover { color: var(--copper-text); }
-.menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; color: var(--ink); cursor: pointer; }
-.menu-btn svg { width: 22px; height: 22px; display: block; }
+/* Encabezado: transparente sobre la portada, blanco al hacer scroll */
+.top { position: fixed; inset: 0 0 auto 0; z-index: 40; padding-top: env(safe-area-inset-top, 0px); transition: background .3s, box-shadow .3s; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 18px; transition: padding .3s; }
+.nav { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 32px); }
+.nav a:not(.btn) { font-size: var(--step--1); font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,.92); transition: color .2s; }
+.nav a:not(.btn):hover { color: var(--gold-light); }
+.top.solid { background: rgba(255,255,255,.95); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+.top.solid .wrap { padding-block: 10px; }
+.top.solid .brand { color: var(--gold-deep); }
+.top.solid .nav a:not(.btn) { color: var(--muted); }
+.top.solid .nav a:not(.btn):hover { color: var(--gold-deep); }
+.menu-btn { display: none; width: 46px; height: 46px; place-items: center; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.5); border-radius: 50%; color: var(--white); cursor: pointer; }
+.top.solid .menu-btn, .top.open .menu-btn { color: var(--ink); border-color: var(--line); background: var(--white); }
+.menu-btn svg { width: 22px; height: 22px; }
 @media (max-width: 1020px) {
-  .menu-btn { display: block; }
-  .nav { position: absolute; inset: 100% 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px var(--gutter) 20px; }
-  .nav a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .nav .btn { margin-top: 16px; justify-content: center; }
+  .menu-btn { display: grid; }
+  .nav { position: absolute; inset: 100% 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--white); padding: 8px var(--gutter) 22px; box-shadow: var(--shadow); }
+  .nav a:not(.btn), .top.solid .nav a:not(.btn) { color: var(--ink); padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav .btn { margin-top: 16px; }
   .top:not(.open) .nav { display: none; }
+  .top.open { background: var(--white); }
+  .top.open .brand { color: var(--gold-deep); }
 }
 
-/* Hero */
-.hero { padding-block: clamp(36px, 6vw, 80px) clamp(48px, 7vw, 96px); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
-.hero-copy { display: grid; gap: 26px; min-width: 0; }
-.hero h1 { font-size: var(--step-3); }
-.hero h1 em { font-style: normal; color: var(--copper-text); }
-.hero-lead { color: var(--muted); max-width: 42ch; font-size: var(--step-1); line-height: 1.5; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-figure { margin: 0; position: relative; min-width: 0; }
-.hero-frame { overflow: hidden; border-radius: 0 0 0 120px; aspect-ratio: 4 / 3.6; background: var(--mist); }
-.hero-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 68% 62%; transform-origin: 72% 55%; animation: drift 22s ease-in-out infinite alternate; }
-@keyframes drift {
-  from { transform: scale(1.14) translate(-2.5%, 1.5%); }
-  to   { transform: scale(1.02) translate(1%, -0.5%); }
-}
-.hero-figure figcaption { position: absolute; left: 0; bottom: -1px; transform: translateY(100%); padding-top: 10px; font-size: var(--step--1); color: var(--muted); }
-.plaques { display: flex; flex-wrap: wrap; gap: 10px 0; margin-top: 6px; padding-top: 22px; border-top: 1px solid var(--line); }
-.plaques span { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; padding-right: 18px; margin-right: 18px; border-right: 1px solid var(--copper); }
-.plaques span:last-child { border-right: 0; margin-right: 0; }
-@media (max-width: 880px) {
-  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
-  .hero-figure { order: -1; }
-  .hero-frame { border-radius: 0 0 0 64px; aspect-ratio: 4 / 3.4; }
-  .hero-figure figcaption { position: static; transform: none; }
-}
+/* Portada */
+.hero { position: relative; min-height: clamp(560px, 92svh, 900px); display: grid; place-items: center; overflow: hidden; color: var(--white); text-align: center; background: #2c3433; }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 60%; transform-origin: 70% 55%; animation: drift 24s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: scale(1.14) translate(-2%, 1.5%); } to { transform: scale(1.02) translate(1%, -0.5%); } }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,26,25,.6) 0%, rgba(20,26,25,.38) 42%, rgba(20,26,25,.62) 100%); }
+.hero-copy { position: relative; z-index: 1; display: grid; justify-items: center; gap: 22px; padding-block: 140px 100px; max-width: 920px; }
+.hero .eyebrow { color: var(--gold-light); }
+.hero h1 { font-size: var(--step-3); font-weight: 500; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+.hero-lead { max-width: 54ch; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.18rem); color: rgba(255,255,255,.92); }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+.hero-note { position: absolute; z-index: 1; left: 0; right: 0; bottom: 22px; padding-inline: var(--gutter); font-size: var(--step--1); letter-spacing: 0.08em; color: rgba(255,255,255,.8); }
 
-/* Section heads */
-section { scroll-margin-top: 80px; }
-.section { padding-block: clamp(64px, 9vw, 120px); }
-.head { display: grid; grid-template-columns: auto 1px minmax(0, 1fr); gap: 0 clamp(16px, 2.5vw, 32px); align-items: start; margin-bottom: clamp(36px, 5vw, 64px); }
-.head .label { padding-top: 0.55em; }
-.head-bar { background: var(--copper); align-self: stretch; }
-.head h2 { font-size: var(--step-2); max-width: 22ch; }
-.head p { color: var(--muted); max-width: 58ch; margin-top: 14px; }
-@media (max-width: 560px) { .head { grid-template-columns: minmax(0, 1fr); gap: 12px; } .head-bar { display: none; } }
+/* Franja de especialidades (en lugar de logos de marcas) */
+.strip { border-bottom: 1px solid var(--line); }
+.strip ul { list-style: none; margin: 0 auto; padding-block: 26px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px clamp(20px, 3vw, 40px); }
+.strip li { display: inline-flex; align-items: center; gap: 10px; font-size: var(--step--1); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); }
+.strip svg { width: 22px; height: 22px; color: var(--gold-deep); }
 
-/* Servicios */
-.services { background: var(--surface); border-block: 1px solid var(--line); }
-.svc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--ink); }
-.svc { padding: 28px clamp(16px, 2vw, 28px) 8px 0; display: grid; gap: 14px; align-content: start; min-width: 0; }
-.svc + .svc { padding-left: clamp(16px, 2vw, 28px); border-left: 1px solid var(--line); }
-.svc svg { width: 44px; height: 44px; color: var(--copper); }
-.svc h3 { font-size: var(--step-1); }
-.svc p { color: var(--muted); font-size: 0.97rem; }
-.svc ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 0; }
-.svc li { padding: 9px 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
-@media (max-width: 980px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .svc:nth-child(3) { border-left: 0; padding-left: 0; } .svc:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 20px; } }
-@media (max-width: 560px) { .svc-grid { grid-template-columns: minmax(0, 1fr); } .svc + .svc { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); margin-top: 20px; } }
+/* Secciones */
+section { scroll-margin-top: 76px; }
+.section { padding-block: clamp(72px, 9vw, 128px); }
+.center-head { display: grid; justify-items: center; text-align: center; gap: 16px; max-width: 760px; margin: 0 auto clamp(40px, 5vw, 64px); }
+.center-head h2 { font-size: var(--step-2); }
+.center-head p { color: var(--muted); max-width: 62ch; }
+.intro-mark { width: clamp(150px, 22vw, 230px); height: auto; aspect-ratio: 556 / 355; color: var(--gold); margin-top: 18px; }
 
-/* La clínica */
-.clinic-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
-.clinic-photo { margin: 0; }
-.clinic-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 0 120px 0 0; }
-.facts { display: grid; gap: 0; margin: 0; }
-.fact { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
-.fact:last-child { border-bottom: 1px solid var(--line); }
-.fact dt { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper-text); padding-top: 3px; }
-.fact dd { margin: 0; }
-.fact dd strong { display: block; font-family: var(--font-display); font-weight: 400; font-size: var(--step-1); line-height: 1.25; margin-bottom: 4px; }
-.fact dd span { color: var(--muted); font-size: 0.97rem; }
-.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); margin-top: clamp(28px, 4vw, 48px); }
-.duo figure { margin: 0; display: grid; gap: 10px; }
-.duo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
-.duo figcaption { font-size: var(--step--1); color: var(--muted); }
-@media (max-width: 880px) { .clinic-grid { grid-template-columns: minmax(0, 1fr); } .clinic-photo img { border-radius: 0 64px 0 0; } }
+/* Tarjetas de vidrio sobre foto difuminada (estilo Lumina) */
+.glass-zone { position: relative; overflow: hidden; padding-block: clamp(72px, 9vw, 120px); isolation: isolate; }
+.glass-zone::before { content: ""; position: absolute; inset: -40px; z-index: -2; background: url("img/consultorio.jpg") center / cover no-repeat; filter: blur(14px) saturate(1.05); }
+.glass-zone::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(229,235,233,.3), rgba(91,115,112,.35)); }
+.glass-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); }
+.glass { display: grid; justify-items: center; text-align: center; gap: 14px; padding: clamp(28px, 3vw, 44px) clamp(20px, 2.4vw, 32px); border-radius: var(--r-md); background: rgba(255,255,255,.76); border: 1px solid rgba(255,255,255,.85); backdrop-filter: blur(16px) saturate(1.2); -webkit-backdrop-filter: blur(16px) saturate(1.2); box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s; }
+.glass:hover { transform: translateY(-4px); box-shadow: 0 26px 60px -26px rgba(29,37,36,.45); }
+.glass svg { width: 64px; height: 64px; color: var(--sage); }
+.glass h3 { font-size: var(--step-1); }
+.glass p { color: #3f4847; font-size: 0.95rem; }
+.glass ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.glass li { font-size: 0.78rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: rgba(91,115,112,.12); color: var(--sage); }
+@media (max-width: 860px) { .glass-grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; } }
+
+/* Servicios en círculos */
+.circles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px) clamp(12px, 2vw, 24px); }
+.circle { display: grid; justify-items: center; text-align: center; gap: 10px; align-content: start; text-decoration: none; }
+.circle-icon { width: clamp(84px, 9vw, 108px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; display: grid; place-items: center; background: var(--shell); border: 1px solid #e8dccb; color: var(--gold-deep); transition: background .25s, transform .25s; }
+.circle:hover .circle-icon { background: #efe4d4; transform: translateY(-3px); }
+.circle-icon svg { width: 46%; height: 46%; }
+.circle h3 { font-size: 1.3rem; margin-top: 6px; }
+@media (max-width: 980px) { .circles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .circles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Bloque salvia redondeado: la clínica */
+.panel { background: var(--sage); color: var(--white); border-radius: var(--r-lg); overflow: hidden; }
+.office { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: stretch; }
+.office-copy { display: grid; gap: 20px; align-content: center; padding: clamp(32px, 5vw, 72px); }
+.office-copy .eyebrow, .contact-info .eyebrow { color: var(--gold-light); }
+.office-copy h2 { font-size: var(--step-2); }
+.office-copy p { color: rgba(255,255,255,.9); }
+.ticks { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 12px; }
+.ticks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; align-items: start; color: rgba(255,255,255,.94); font-size: 0.95rem; }
+.ticks svg { width: 22px; height: 22px; color: var(--gold-light); margin-top: 2px; }
+.office-photo { margin: 0; min-height: 320px; }
+.office-photo img { width: 100%; height: 100%; object-fit: cover; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); margin-top: clamp(14px, 2vw, 24px); }
+.duo figure { margin: 0; position: relative; border-radius: var(--r-lg); overflow: hidden; }
+.duo img { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; }
+.duo figcaption { position: absolute; left: 14px; bottom: 14px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.88); backdrop-filter: blur(8px); font-size: 0.82rem; font-weight: 500; color: var(--ink); }
+@media (max-width: 860px) { .office { grid-template-columns: minmax(0, 1fr); } .office-photo { order: -1; min-height: 0; } .office-photo img { aspect-ratio: 3 / 2; } }
+
+/* Equipo: tarjetas sobre salvia claro (estilo Lumina) */
+.team-zone { background: linear-gradient(180deg, var(--white) 0 22%, var(--sage-soft) 22% 100%); }
+.docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 40px); max-width: 920px; margin-inline: auto; }
+.doc { background: var(--white); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow); display: grid; align-content: start; }
+.doc-photo { background: linear-gradient(180deg, #dfe7e5, #c7d4d1); }
+.doc-photo img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; object-position: top; }
+.doc-body { padding: 22px clamp(18px, 2.4vw, 28px) 26px; display: grid; gap: 4px; text-align: center; }
+.doc h3 { font-size: var(--step-1); }
+.doc .doc-role { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-deep); margin-top: 4px; }
+.doc-body p { color: var(--muted); font-size: 0.93rem; }
+.doc-body .doc-reg { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) { .docs { grid-template-columns: minmax(0, 1fr); max-width: 440px; } }
 
 /* Primera visita */
-.visit { background: var(--ink); color: var(--on-ink); }
-.visit .label { color: var(--copper); }
-.visit .head p { color: color-mix(in srgb, var(--on-ink) 72%, transparent); }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); counter-reset: step; }
-.steps li { counter-increment: step; display: grid; gap: 12px; padding-top: 22px; border-top: 1px solid color-mix(in srgb, var(--on-ink) 25%, transparent); }
-.steps li::before { content: "Clínica | " counter(step); font-size: var(--step--1); letter-spacing: 0.24em; text-transform: uppercase; color: var(--copper); }
-.steps h3 { font-size: var(--step-1); }
-.steps p { color: color-mix(in srgb, var(--on-ink) 72%, transparent); font-size: 0.97rem; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); counter-reset: step; }
+.steps li { counter-increment: step; display: grid; gap: 10px; align-content: start; padding: clamp(24px, 3vw, 36px); border-radius: var(--r-md); background: var(--shell); }
+.steps li::before { content: counter(step); width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--on-gold); font: 600 1.3rem/1 var(--font-display); }
+.steps h3 { font-size: var(--step-1); margin-top: 8px; }
+.steps p { color: var(--muted); font-size: 0.95rem; }
 @media (max-width: 760px) { .steps { grid-template-columns: minmax(0, 1fr); } }
 
 /* Videos */
+.videos { background: var(--shell); }
 .reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2vw, 28px); }
-.reel { margin: 0; display: grid; gap: 12px; min-width: 0; }
-.reel video { width: 100%; aspect-ratio: 9 / 14; object-fit: cover; background: var(--mist); border-radius: var(--radius); }
-.reel figcaption { display: grid; gap: 2px; }
-.reel figcaption b { font-family: var(--font-display); font-weight: 400; font-size: var(--step-1); }
-.reel figcaption span { font-size: 0.95rem; color: var(--muted); }
+.reel { margin: 0; display: grid; gap: 14px; min-width: 0; }
+.reel video { width: 100%; aspect-ratio: 9 / 14; object-fit: cover; background: var(--sage-soft); border-radius: var(--r-md); box-shadow: var(--shadow); }
+.reel figcaption { display: grid; gap: 2px; text-align: center; }
+.reel figcaption b { font-family: var(--font-display); font-weight: 500; font-size: var(--step-1); line-height: 1.2; }
+.reel figcaption span { font-size: 0.9rem; color: var(--muted); }
 @media (max-width: 760px) {
-  .reels { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .reels { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 76%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
   .reel { scroll-snap-align: start; }
 }
 
 /* Contacto */
-.contact { background: var(--mist); }
-.contact-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.contact-panel { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+.contact-info { padding: clamp(32px, 4.5vw, 64px); display: grid; gap: 22px; align-content: start; }
+.contact-info h2 { font-size: var(--step-2); }
 .info { display: grid; gap: 0; margin: 0; }
-.info div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
-.info dt { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper-text); padding-top: 3px; }
-.info dd { margin: 0; overflow-wrap: anywhere; }
+.info > div { padding: 16px 0; border-top: 1px dotted rgba(255,255,255,.45); display: grid; gap: 4px; }
+.info dt { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); }
+.info dd { margin: 0; overflow-wrap: anywhere; color: rgba(255,255,255,.95); }
 .hours { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; font-variant-numeric: tabular-nums; }
-.hours + .hours { margin-top: 4px; }
-.map-link { display: inline-block; margin-top: 6px; font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper-text); }
-.form { background: var(--surface); padding: clamp(20px, 3vw, 40px); border-radius: var(--radius); display: grid; gap: 18px; border: 1px solid var(--line); }
+.map-link { display: inline-block; margin-top: 6px; font-size: var(--step--1); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); text-decoration: none; }
+.map-link:hover { text-decoration: underline; }
+.contact-panel .ph { border-color: var(--gold-light); }
+.social { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.social a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.social a:hover { color: var(--gold-light); }
+.social svg { width: 20px; height: 20px; flex: none; }
+.form-wrap { background: var(--sage-soft); color: var(--ink); padding: clamp(28px, 4vw, 56px); display: grid; align-content: center; }
+.form { display: grid; gap: 18px; }
 .form h3 { font-size: var(--step-1); }
 .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .field { display: grid; gap: 6px; min-width: 0; }
-.field label { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-.field input, .field select, .field textarea { font: inherit; font-weight: 400; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; width: 100%; }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--copper); box-shadow: 0 0 0 3px color-mix(in srgb, var(--copper) 25%, transparent); }
+.field label { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.field input, .field select, .field textarea { font: inherit; color: var(--ink); background: var(--white); border: 1px solid #cdd6d3; border-radius: 12px; padding: 12px 14px; width: 100%; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold-deep); box-shadow: 0 0 0 3px rgba(201,162,116,.3); }
 .field textarea { min-height: 96px; resize: vertical; }
-.form .note { font-size: 0.9rem; color: var(--muted); }
-.form-done { display: grid; gap: 12px; padding: 16px; border-left: 2px solid var(--copper); background: var(--paper); }
-@media (max-width: 880px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 480px) { .row { grid-template-columns: minmax(0, 1fr); } .info div { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+.form .note { font-size: 0.88rem; color: #4a5452; }
+.form-done { display: grid; gap: 12px; padding: 16px; border-radius: 12px; background: var(--white); border-left: 3px solid var(--gold); }
+@media (max-width: 900px) { .contact-panel { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .row { grid-template-columns: minmax(0, 1fr); } }
 
-/* Footer */
-.foot { padding-block: 40px; border-top: 1px solid var(--line); }
-.foot .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between; }
-.foot p { font-size: 0.9rem; color: var(--muted); }
-
-/* Equipo */
-.docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 56px); max-width: 980px; }
-.doc { display: grid; gap: 18px; align-content: start; min-width: 0; }
-.doc img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: var(--radius); background: var(--mist); }
-.doc:first-child img { border-radius: 0 0 0 96px; }
-.doc:last-child img { border-radius: 0 96px 0 0; }
-.doc-body { display: grid; gap: 4px; padding-left: 18px; border-left: 1px solid var(--copper); }
-.doc h3 { font-size: var(--step-1); margin-bottom: 4px; }
-.doc-body p { color: var(--muted); font-size: 0.97rem; }
-.doc-body .doc-role { color: var(--ink); font-weight: 400; }
-.doc-reg { margin-top: 8px !important; font-variant-numeric: tabular-nums; }
-.doc-reg span { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper-text); margin-right: 8px; }
-@media (max-width: 640px) { .docs { grid-template-columns: minmax(0, 1fr); } .doc:first-child img, .doc:last-child img { border-radius: 0 0 0 64px; } }
-
-/* Redes */
-.social { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-.social a, .map-link { text-decoration: none; }
-.social a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
-.social a:hover { color: var(--copper-text); }
-.social svg { width: 20px; height: 20px; color: var(--copper); flex: none; }
+/* Pie */
+.foot { background: var(--ink); color: rgba(255,255,255,.8); padding-block: 48px calc(48px + env(safe-area-inset-bottom, 0px)); margin-top: clamp(72px, 9vw, 128px); }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: space-between; }
+.foot .brand { color: var(--gold); }
+.foot p { font-size: 0.86rem; max-width: 60ch; }
 .foot-social { display: flex; gap: 10px; }
-.foot-social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); transition: border-color .2s, color .2s; }
-.foot-social a:hover { border-color: var(--copper); color: var(--copper-text); }
+.foot-social a { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: var(--white); transition: border-color .2s, color .2s; }
+.foot-social a:hover { border-color: var(--gold); color: var(--gold); }
 .foot-social svg { width: 18px; height: 18px; }
 
 /* WhatsApp flotante */
-.wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--paper); box-shadow: 0 8px 24px rgba(0,0,0,.18); transition: background .2s; }
-.wa-float:hover { background: var(--copper); color: #fff; }
+.wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--on-gold); box-shadow: 0 10px 28px -8px rgba(0,0,0,.35); transition: transform .2s; }
+.wa-float:hover { transform: scale(1.06); }
 .wa-float svg { width: 26px; height: 26px; }
+
+/* Aparición suave al hacer scroll (todo visible por defecto) */
+.reveal { transition: opacity .7s ease, transform .7s ease; }
+.reveal.pending { opacity: .55; transform: translateY(18px); }
 </style>
 </head>
 <body>
@@ -242,6 +256,8 @@ section { scroll-margin-top: 80px; }
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8L4 20Z M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-.9-.9.9c-1-.4-1.8-1.2-2.2-2.2l.9-.9-.9-1.8L9.5 9"/></symbol>
     <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></g></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M14.5 21v-7.5h2.6l.4-3h-3V8.7c0-.9.3-1.5 1.6-1.5h1.5V4.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H9.2v3h2.5V21"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.5L16 9.5"/></g></symbol>
+    <symbol id="i-tooth" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M24 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/></symbol>
   </defs>
 </svg>
 
@@ -259,227 +275,240 @@ section { scroll-margin-top: 80px; }
       <a href="#servicios">Servicios</a>
       <a href="#clinica">La clínica</a>
       <a href="#equipo">Equipo</a>
-      <a href="#visita">Tu visita</a>
       <a href="#videos">Videos</a>
       <a href="#contacto">Contacto</a>
-      <a class="btn btn-solid js-wa" href="#contacto">Agendar cita</a>
+      <a class="btn btn-gold js-wa" href="#contacto">Agendar cita</a>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="hero" id="inicio">
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="label">Clínica dental · Tegucigalpa</span>
-        <h1>Tu sonrisa, <em>en su eje</em>.</h1>
-        <p class="hero-lead">En Torre Agalta, Blvd. Morazán. Estética dental, ortodoncia, implantes y odontología para toda la familia, en consultorios luminosos con vista a la ciudad.</p>
-        <div class="hero-actions">
-          <a class="btn btn-solid js-wa" href="#contacto"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar por WhatsApp</a>
-          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
-        </div>
-        <div class="plaques" aria-label="Especialidades">
-          <span>Estética</span><span>Ortodoncia</span><span>Implantes</span><span>Familia</span>
-        </div>
+    <div class="hero-bg"><img src="img/consultorio-vista.jpg" width="2000" height="1333" fetchpriority="high" alt="Consultorio de Axis Dental Studio con sillón dental frente al ventanal con vista a Tegucigalpa"></div>
+    <div class="hero-copy wrap">
+      <span class="eyebrow">Clínica dental · Torre Agalta, Tegucigalpa</span>
+      <h1>Sonrisas seguras y saludables</h1>
+      <p class="hero-lead">Estética dental, ortodoncia, implantes y odontología familiar, en consultorios con luz natural y vista a la ciudad.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold js-wa" href="#contacto"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar por WhatsApp</a>
+        <a class="btn btn-light" href="#servicios">Ver servicios</a>
       </div>
-      <figure class="hero-figure">
-        <div class="hero-frame"><img src="img/consultorio-vista.jpg" width="2000" height="1333" fetchpriority="high" alt="Consultorio de Axis Dental Studio con el logo en la pared, sillón dental y ventanal con vista a Tegucigalpa"></div>
-        <figcaption>Consultorio en el piso 10 de Torre Agalta, frente a la ciudad.</figcaption>
-      </figure>
+    </div>
+    <p class="hero-note">Piso 10 · Blvd. Morazán · (+504) 8792-6121</p>
+  </section>
+
+  <div class="strip">
+    <ul class="wrap" aria-label="Especialidades">
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Estética dental</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Ortodoncia</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Implantes</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Endodoncia</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Odontología familiar</li>
+    </ul>
+  </div>
+
+  <section class="section" id="nosotros">
+    <div class="wrap center-head reveal" style="margin-bottom:0">
+      <span class="eyebrow">Axis Dental Studio</span>
+      <h2>Odontología estética y familiar para niños y adultos</h2>
+      <p>Te atendemos en consultorios privados, con equipos digitales y un plan claro desde la primera cita. Sabes qué se hará, cuánto tiempo toma y cuánto cuesta antes de empezar.</p>
+      <svg class="intro-mark" aria-hidden="true"><use href="#axis-mark"/></svg>
     </div>
   </section>
 
-  <section class="section services" id="servicios">
+  <section class="glass-zone" id="servicios" aria-label="Servicios destacados">
     <div class="wrap">
-      <div class="head">
-        <span class="label">Servicios</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
-          <h2>Todo lo que tu sonrisa necesita, en un solo lugar</h2>
-          <p>Desde la limpieza de rutina hasta el diseño de sonrisa completo. Te explicamos cada opción, su tiempo y su costo antes de empezar.</p>
-        </div>
-      </div>
-      <div class="svc-grid">
-        <article class="svc">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M36 6v6M33 9h6M40 15v3M38.5 16.5h3"/></svg>
+      <div class="glass-grid">
+        <article class="glass reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M38 6v7M34.5 9.5h7M41 17v3M39.5 18.5h3"/></svg>
           <h3>Estética dental</h3>
           <p>Sonrisas más blancas, parejas y naturales, diseñadas para tu rostro.</p>
-          <ul><li>Diseño de sonrisa</li><li>Carillas</li><li>Blanqueamiento</li><li>Resinas estéticas</li></ul>
+          <ul><li>Diseño de sonrisa</li><li>Carillas</li><li>Blanqueamiento</li></ul>
+          <a class="more" href="#contacto" data-servicio="Estética dental">Agendar valoración</a>
         </article>
-        <article class="svc">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24c6-5 30-5 36 0"/><rect x="10" y="18" width="5" height="5" rx="1"/><rect x="18" y="16.5" width="5" height="5" rx="1"/><rect x="26" y="16.5" width="5" height="5" rx="1"/><rect x="34" y="18" width="5" height="5" rx="1"/><path d="M8 32c7 4 25 4 32 0"/></svg>
+        <article class="glass reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24c6-5 30-5 36 0"/><rect x="10" y="18" width="5" height="5" rx="1"/><rect x="18" y="16.5" width="5" height="5" rx="1"/><rect x="26" y="16.5" width="5" height="5" rx="1"/><rect x="34" y="18" width="5" height="5" rx="1"/><path d="M8 32c7 4 25 4 32 0"/></svg>
           <h3>Ortodoncia</h3>
-          <p>Alineamos tus dientes y tu mordida, con la opción que mejor va contigo.</p>
-          <ul><li>Brackets metálicos y estéticos</li><li>Alineadores invisibles</li><li>Retenedores</li><li>Ortodoncia para niños</li></ul>
+          <p>Alineamos tus dientes y tu mordida con la opción que mejor va contigo.</p>
+          <ul><li>Brackets</li><li>Alineadores invisibles</li><li>Niños</li></ul>
+          <a class="more" href="#contacto" data-servicio="Ortodoncia">Agendar valoración</a>
         </article>
-        <article class="svc">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8c3-2 6-1 9 1 3-2 6-3 9-1 4 3 3 8 1 11H14c-2-3-3-8 1-11Z"/><path d="M17 23h14M18 27h12M19 31h10M20 35h8M22 39h4"/></svg>
+        <article class="glass reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8c3-2 6-1 9 1 3-2 6-3 9-1 4 3 3 8 1 11H14c-2-3-3-8 1-11Z"/><path d="M17 23h14M18 27h12M19 31h10M20 35h8M22 39h4"/></svg>
           <h3>Implantes</h3>
           <p>Reemplazo fijo y natural para piezas perdidas, con planificación digital.</p>
-          <ul><li>Implantes unitarios</li><li>Coronas y puentes</li><li>Prótesis sobre implantes</li><li>Rehabilitación oral</li></ul>
-        </article>
-        <article class="svc">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 14c-2-2-6-3-8-1-3 2-2 7-1 9 1 2 1 5 2 8 .3 2 2 2 2.3 0l1.2-4h3l1.2 4c.3 2 2 2 2.3 0 .5-3 .7-6 2-8 1-2 2-7-1-9-2-2-6-1-8 1Z"/><path d="M33 20c-2-2-5-2-7 0-2 2-1 6 0 8 1 2 1 4 1.5 6 .3 1.5 1.7 1.5 2 0l1-3h2.5l1 3c.3 1.5 1.7 1.5 2 0 .5-2 .5-4 1.5-6 1-2 2-6 0-8-2-2-5-2-7 0Z"/></svg>
-          <h3>General y familiar</h3>
-          <p>Cuidado preventivo y tratamientos para adultos y niños.</p>
-          <ul><li>Limpieza y profilaxis</li><li>Endodoncia</li><li>Odontopediatría</li><li>Urgencias dentales</li></ul>
+          <ul><li>Implantes</li><li>Coronas y puentes</li><li>Rehabilitación</li></ul>
+          <a class="more" href="#contacto" data-servicio="Implantes">Agendar valoración</a>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="clinica">
+  <section class="section" aria-labelledby="todos">
     <div class="wrap">
-      <div class="head">
-        <span class="label">La clínica</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
-          <h2>Un espacio pensado para que te sientas tranquilo</h2>
-          <p>Consultorios privados, equipos modernos y un equipo que te explica cada paso.</p>
-        </div>
+      <div class="center-head reveal">
+        <span class="eyebrow">Servicios</span>
+        <h2 id="todos">Cuidado dental completo</h2>
+        <p>Tratamientos para cada etapa, desde la limpieza de rutina hasta una urgencia.</p>
       </div>
-      <div class="clinic-grid">
-        <figure class="clinic-photo">
-          <img src="img/consultorio.jpg" width="1800" height="1200" loading="lazy" alt="Consultorio de Axis con sillón dental, monitor, lavamanos dorado y el logo de la clínica en la pared">
-        </figure>
-        <dl class="facts">
-          <div class="fact"><dt>Espacio</dt><dd><strong>Consultorios privados</strong><span>Cada paciente se atiende en su propia sala, con luz natural.</span></dd></div>
-          <div class="fact"><dt>Equipo</dt><dd><strong>Diagnóstico digital</strong><span>Radiografía digital y tecnología intraoral para ver tu caso con precisión.</span></dd></div>
-          <div class="fact"><dt>Cuidado</dt><dd><strong>Bioseguridad</strong><span>Superficies protegidas y material esterilizado en cada cita.</span></dd></div>
-          <div class="fact"><dt>Trato</dt><dd><strong>Plan claro</strong><span>Sabes qué se hará, cuánto tiempo toma y cuánto cuesta.</span></dd></div>
-        </dl>
+      <div class="circles">
+        <a class="circle reveal" href="#contacto" data-servicio="Estética dental">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 26c5 6 27 6 32 0"/><path d="M10 22c4-3 24-3 28 0"/><path d="M15 21v4M20 20v5M25 20v5M30 20v5M35 21v4"/></svg></span>
+          <h3>Diseño de sonrisa</h3><span class="more">Agendar</span>
+        </a>
+        <a class="circle reveal" href="#contacto" data-servicio="Estética dental">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14c-3-3-7-3-9-1-3 3-2 8-1 11 1 3 2 6 2.5 10 .3 2 2.5 2 3 0l1.5-5h6l1.5 5c.5 2 2.7 2 3 0 .5-4 1.5-7 2.5-10 1-3 2-8-1-11-2-2-6-2-9 1Z"/><path d="M36 5l1.2 3 3 1.2-3 1.2L36 13.5l-1.2-3.1-3-1.2 3-1.2Z"/></svg></span>
+          <h3>Blanqueamiento</h3><span class="more">Agendar</span>
+        </a>
+        <a class="circle reveal" href="#contacto" data-servicio="Valoración general">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M20 20l1.5 8M28 20l-1.5 8"/></svg></span>
+          <h3>Endodoncia</h3><span class="more">Agendar</span>
+        </a>
+        <a class="circle reveal" href="#contacto" data-servicio="Valoración general">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="18" r="8"/><path d="M20.5 19.5c1.8 1.8 5.2 1.8 7 0"/><path d="M12 40c1-7 6-11 12-11s11 4 12 11"/></svg></span>
+          <h3>Odontopediatría</h3><span class="more">Agendar</span>
+        </a>
+        <a class="circle reveal" href="#contacto" data-servicio="Limpieza">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38l18-18"/><path d="M26 14l8 8"/><path d="M28 12l2-2 8 8-2 2"/><path d="M31 9v-3M35 9l2-2M39 13h3"/></svg></span>
+          <h3>Limpieza</h3><span class="more">Agendar</span>
+        </a>
+        <a class="circle reveal" href="#contacto" data-servicio="Urgencia">
+          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 8h10v11h11v10H29v11H19V29H8V19h11Z"/></svg></span>
+          <h3>Urgencias</h3><span class="more">Agendar</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="clinica">
+    <div class="wrap">
+      <div class="panel office reveal">
+        <div class="office-copy">
+          <span class="eyebrow">Nuestra clínica</span>
+          <h2>Un espacio pensado para que te sientas tranquilo</h2>
+          <p>Estamos en el piso 10 de Torre Agalta, con consultorios privados y vista a la ciudad.</p>
+          <ul class="ticks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Consultorios privados con luz natural</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Radiografía digital y tecnología intraoral</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Material esterilizado y superficies protegidas en cada cita</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plan de tratamiento y presupuesto por escrito</li>
+          </ul>
+        </div>
+        <figure class="office-photo"><img src="img/consultorio.jpg" width="1800" height="1200" loading="lazy" alt="Consultorio de Axis con sillón dental, monitor, lavamanos dorado y el logo de la clínica en la pared"></figure>
       </div>
       <div class="duo">
-        <figure>
-          <img src="img/equipo-radiografia.jpg" width="1100" height="1650" loading="lazy" alt="Dos miembros del equipo de Axis tomando una radiografía digital a una paciente">
-          <figcaption>Radiografía digital durante la consulta.</figcaption>
-        </figure>
-        <figure>
-          <img src="img/paciente-sonrisa.jpg" width="1100" height="1650" loading="lazy" alt="Paciente sonriendo en el sillón mientras la doctora la revisa">
-          <figcaption>Revisión con tecnología intraoral.</figcaption>
-        </figure>
+        <figure class="reveal"><img src="img/equipo-radiografia.jpg" width="1100" height="1650" loading="lazy" alt="Dos miembros del equipo de Axis tomando una radiografía digital a una paciente"><figcaption>Radiografía digital</figcaption></figure>
+        <figure class="reveal"><img src="img/paciente-sonrisa.jpg" width="1100" height="1650" loading="lazy" alt="Paciente sonriendo en el sillón mientras la doctora la revisa"><figcaption>Revisión intraoral</figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="section team" id="equipo">
+  <section class="section team-zone" id="equipo">
     <div class="wrap">
-      <div class="head">
-        <span class="label">Nuestro equipo</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
-          <h2>Los doctores que te atienden</h2>
-          <p>Odontólogos colegiados en Honduras, en formación continua de especialidad.</p>
-        </div>
+      <div class="center-head reveal">
+        <span class="eyebrow">Nuestro equipo</span>
+        <h2>Los doctores que te atienden</h2>
+        <p>Odontólogos colegiados en Honduras, en formación continua de especialidad.</p>
       </div>
       <div class="docs">
-        <article class="doc">
-          <img src="img/dr-brad-chavez.jpg" width="900" height="1125" loading="lazy" alt="Dr. Brad Chavez con uniforme azul marino y los brazos cruzados">
+        <article class="doc reveal">
+          <div class="doc-photo"><img src="img/dr-brad-chavez.jpg" width="900" height="1125" loading="lazy" alt="Dr. Brad Chavez con uniforme azul marino y los brazos cruzados"></div>
           <div class="doc-body">
             <h3>Dr. Brad Scully Chavez Padilla</h3>
             <p class="doc-role">Odontólogo general · UNICAH</p>
             <p>Estudiante de Ortodoncia y Ortopedia Maxilofacial</p>
-            <p class="doc-reg"><span>Colegiación</span> 20250844828P</p>
+            <p class="doc-reg">Colegiación 20250844828P</p>
           </div>
         </article>
-        <article class="doc">
-          <img src="img/dra-maria-martinez.jpg" width="900" height="1125" loading="lazy" alt="Dra. María Fernanda Martinez sonriendo, con uniforme negro">
+        <article class="doc reveal">
+          <div class="doc-photo"><img src="img/dra-maria-martinez.jpg" width="900" height="1125" loading="lazy" alt="Dra. María Fernanda Martinez sonriendo, con uniforme negro"></div>
           <div class="doc-body">
             <h3>Dra. María Fernanda Martinez Ruiz</h3>
             <p class="doc-role">Odontóloga general · UNICAH</p>
             <p>Estudiante de Endodoncia</p>
-            <p class="doc-reg"><span>Colegiación</span> 20250744779P</p>
+            <p class="doc-reg">Colegiación 20250744779P</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section visit" id="visita">
+  <section class="section" id="visita">
     <div class="wrap">
-      <div class="head">
-        <span class="label">Tu primera visita</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
-          <h2>Así funciona, paso a paso</h2>
-          <p>Sin sorpresas: antes de cualquier tratamiento conoces el plan completo.</p>
-        </div>
+      <div class="center-head reveal">
+        <span class="eyebrow">Tu primera visita</span>
+        <h2>Así funciona, paso a paso</h2>
       </div>
       <ol class="steps">
-        <li><h3>Valoración</h3><p>Revisamos tu boca, tomamos radiografías si hacen falta y escuchamos lo que quieres lograr.</p></li>
-        <li><h3>Plan de tratamiento</h3><p>Te presentamos las opciones, el número de citas y el presupuesto por escrito.</p></li>
-        <li><h3>Tratamiento y control</h3><p>Realizamos el tratamiento y te damos seguimiento para que el resultado dure.</p></li>
+        <li class="reveal"><h3>Valoración</h3><p>Revisamos tu boca, tomamos radiografías si hacen falta y escuchamos lo que quieres lograr.</p></li>
+        <li class="reveal"><h3>Plan de tratamiento</h3><p>Te presentamos las opciones, el número de citas y el presupuesto por escrito.</p></li>
+        <li class="reveal"><h3>Tratamiento y control</h3><p>Realizamos el tratamiento y te damos seguimiento para que el resultado dure.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="section" id="videos">
+  <section class="section videos" id="videos">
     <div class="wrap">
-      <div class="head">
-        <span class="label">Videos</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
-          <h2>Conócenos antes de tu cita</h2>
-          <p>Recorre la clínica y escucha a quienes ya nos visitaron.</p>
-        </div>
+      <div class="center-head reveal">
+        <span class="eyebrow">Videos</span>
+        <h2>Conócenos antes de tu cita</h2>
+        <p>Recorre la clínica y escucha a quienes ya nos visitaron.</p>
       </div>
       <div class="reels">
         <figure class="reel">
           <video controls playsinline preload="metadata" poster="img/poster-recorrido.jpg"><source src="video/recorrido.mp4" type="video/mp4"></video>
-          <figcaption><b>Recorrido por la clínica</b><span>Pasillos, salas y consultorios.</span></figcaption>
+          <figcaption><b>Recorrido por la clínica</b><span>Pasillos, salas y consultorios</span></figcaption>
         </figure>
         <figure class="reel">
           <video controls playsinline preload="metadata" poster="img/poster-testimonio.jpg"><source src="video/testimonio.mp4" type="video/mp4"></video>
-          <figcaption><b>Testimonio de paciente</b><span>Su experiencia en Axis.</span></figcaption>
+          <figcaption><b>Testimonio de paciente</b><span>Su experiencia en Axis</span></figcaption>
         </figure>
         <figure class="reel">
           <video controls playsinline preload="metadata" poster="img/poster-conoce-axis.jpg"><source src="video/conoce-axis.mp4" type="video/mp4"></video>
-          <figcaption><b>Conoce Axis</b><span>Nuestro equipo te cuenta cómo trabajamos.</span></figcaption>
+          <figcaption><b>Conoce Axis</b><span>Cómo trabajamos</span></figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <section class="section contact" id="contacto">
+  <section class="section" id="contacto" style="padding-bottom:0">
     <div class="wrap">
-      <div class="head">
-        <span class="label">Contacto</span>
-        <span class="head-bar" aria-hidden="true"></span>
-        <div>
+      <div class="panel contact-panel reveal">
+        <div class="contact-info">
+          <span class="eyebrow">Contacto</span>
           <h2>Agenda tu cita</h2>
-          <p>Escríbenos por WhatsApp o déjanos tus datos y te confirmamos el horario.</p>
+          <dl class="info">
+            <div><dt>Dónde estamos</dt><dd>Torre Agalta, Blvd. Morazán<br>Piso 10, Local 1024<br>Tegucigalpa, Honduras<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Torre+Agalta+Boulevard+Moraz%C3%A1n+Tegucigalpa" target="_blank" rel="noopener">Ver en Google Maps →</a></dd></div>
+            <div><dt>Teléfono y WhatsApp</dt><dd>(+504) 8792-6121</dd></div>
+            <div><dt>Horario</dt><dd><span class="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 6:00 p. m.</span></span><span class="hours"><span>Sábado y domingo</span><span>10:00 a. m. – 3:00 p. m.</span></span></dd></div>
+            <div><dt>Correo</dt><dd><span class="ph">[correo@axisdental.hn]</span></dd></div>
+            <div><dt>Redes</dt><dd><span class="social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-ig"/></svg>@axisldentalstudio</a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></span></dd></div>
+          </dl>
         </div>
-      </div>
-      <div class="contact-grid">
-        <dl class="info">
-          <div><dt>Dirección</dt><dd>Torre Agalta, Blvd. Morazán<br>Piso 10, Local 1024<br>Tegucigalpa, Honduras<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Torre+Agalta+Boulevard+Moraz%C3%A1n+Tegucigalpa" target="_blank" rel="noopener">Ver en Google Maps</a></dd></div>
-          <div><dt>Teléfono y WhatsApp</dt><dd>(+504) 8792-6121</dd></div>
-          <div><dt>Correo</dt><dd><span class="ph">[correo@axisdental.hn]</span></dd></div>
-          <div><dt>Horario</dt><dd><span class="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 6:00 p. m.</span></span><span class="hours"><span>Sábado y domingo</span><span>10:00 a. m. – 3:00 p. m.</span></span></dd></div>
-          <div><dt>Redes</dt><dd><span class="social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-ig"/></svg>@axisldentalstudio</a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></span></dd></div>
-        </dl>
-        <form class="form" id="cita-form" novalidate>
-          <h3>Solicitar cita</h3>
-          <div class="row">
-            <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
-            <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></div>
-          </div>
-          <div class="row">
-            <div class="field"><label for="f-servicio">Servicio</label>
-              <select id="f-servicio" name="servicio">
-                <option>Valoración general</option><option>Estética dental</option><option>Ortodoncia</option><option>Implantes</option><option>Limpieza</option><option>Urgencia</option>
-              </select></div>
-            <div class="field"><label for="f-horario">Horario preferido</label>
-              <select id="f-horario" name="horario"><option>Mañana</option><option>Tarde</option><option>Fin de semana</option></select></div>
-          </div>
-          <div class="field"><label for="f-msg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje"></textarea></div>
-          <button class="btn btn-solid" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preparar mensaje</button>
-          <p class="note" id="form-note">Armamos el mensaje con tus datos para que lo envíes por WhatsApp.</p>
-          <div class="form-done" id="form-done" hidden aria-live="polite">
-            <p id="form-done-text"></p>
-            <a class="btn btn-ghost" id="form-wa-link" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
-          </div>
-        </form>
+        <div class="form-wrap">
+          <form class="form" id="cita-form" novalidate>
+            <h3>Solicitar cita</h3>
+            <div class="row">
+              <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
+              <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="f-servicio">Servicio</label>
+                <select id="f-servicio" name="servicio">
+                  <option>Valoración general</option><option>Estética dental</option><option>Ortodoncia</option><option>Implantes</option><option>Limpieza</option><option>Urgencia</option>
+                </select></div>
+              <div class="field"><label for="f-horario">Horario preferido</label>
+                <select id="f-horario" name="horario"><option>Mañana</option><option>Tarde</option><option>Fin de semana</option></select></div>
+            </div>
+            <div class="field"><label for="f-msg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje"></textarea></div>
+            <button class="btn btn-gold" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preparar mensaje</button>
+            <p class="note" id="form-note">Armamos el mensaje con tus datos para que lo envíes por WhatsApp.</p>
+            <div class="form-done" id="form-done" hidden aria-live="polite">
+              <p id="form-done-text"></p>
+              <a class="btn btn-line" id="form-wa-link" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -492,7 +521,7 @@ section { scroll-margin-top: 80px; }
       <span class="brand-bar" aria-hidden="true"></span>
       <span class="brand-name"><b>AXIS</b><small>DENTAL STUDIO</small></span>
     </a>
-<div class="foot-social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a></div>
+    <div class="foot-social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a></div>
     <p>© <span id="year">2026</span> Axis Dental Studio · Torre Agalta, Blvd. Morazán, piso 10, local 1024 · Tegucigalpa · (+504) 8792-6121</p>
   </div>
 </footer>
@@ -500,7 +529,7 @@ section { scroll-margin-top: 80px; }
 <a class="wa-float js-wa" href="#contacto" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
 <script>
-/* Cambia este número (código de país + número, sin espacios ni +) para activar WhatsApp. */
+/* Número de WhatsApp: código de país + número, sin espacios ni + */
 var WHATSAPP = "50487926121";
 var WA_READY = !/^504?0+$/.test(WHATSAPP);
 
@@ -516,15 +545,26 @@ if (WA_READY) {
   });
 }
 
-var top_ = document.getElementById("top");
+/* Encabezado: se vuelve sólido al bajar */
+var header = document.getElementById("top");
+function onScroll() { header.classList.toggle("solid", window.scrollY > 40); }
+onScroll();
+window.addEventListener("scroll", onScroll, { passive: true });
+
 var menuBtn = document.getElementById("menu-btn");
 menuBtn.addEventListener("click", function () {
-  var open = top_.classList.toggle("open");
+  var open = header.classList.toggle("open");
   menuBtn.setAttribute("aria-expanded", open);
   menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
 });
 document.querySelectorAll("#nav a").forEach(function (a) {
-  a.addEventListener("click", function () { top_.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+  a.addEventListener("click", function () { header.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+});
+
+/* Los enlaces de servicio preseleccionan el servicio en el formulario */
+var form = document.getElementById("cita-form");
+document.querySelectorAll("[data-servicio]").forEach(function (a) {
+  a.addEventListener("click", function () { form.servicio.value = a.getAttribute("data-servicio"); });
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -535,7 +575,16 @@ videos.forEach(function (v) {
   v.addEventListener("play", function () { videos.forEach(function (o) { if (o !== v) o.pause(); }); });
 });
 
-var form = document.getElementById("cita-form");
+/* Aparición suave: solo se oculta lo que todavía está debajo de la pantalla */
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.remove("pending"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach(function (el) {
+    if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add("pending"); io.observe(el); }
+  });
+}
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   var nombre = form.nombre.value.trim();
@@ -548,18 +597,12 @@ form.addEventListener("submit", function (e) {
   var msg = "Hola, soy " + nombre + ". Quiero agendar una cita de " + form.servicio.value.toLowerCase() +
     " en horario de " + form.horario.value.toLowerCase() + ". Mi teléfono es " + tel + "." +
     (form.mensaje.value.trim() ? " " + form.mensaje.value.trim() : "");
-  var done = document.getElementById("form-done");
   var link = document.getElementById("form-wa-link");
   document.getElementById("form-note").textContent = "Mensaje listo.";
-  if (WA_READY) {
-    document.getElementById("form-done-text").textContent = "“" + msg + "”";
-    link.href = waLink(msg);
-    link.hidden = false;
-  } else {
-    document.getElementById("form-done-text").textContent = "“" + msg + "” — El número de WhatsApp de la clínica aún no está configurado.";
-    link.hidden = true;
-  }
-  done.hidden = false;
+  document.getElementById("form-done-text").textContent = "“" + msg + "”";
+  link.href = waLink(msg);
+  link.hidden = !WA_READY;
+  document.getElementById("form-done").hidden = false;
 });
 </script>
 </body>
