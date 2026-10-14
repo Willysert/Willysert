@@ -78,7 +78,7 @@ p { margin: 0; }
 .nav a:not(.btn):hover { color: var(--copper-text); }
 .menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; color: var(--ink); cursor: pointer; }
 .menu-btn svg { width: 22px; height: 22px; display: block; }
-@media (max-width: 880px) {
+@media (max-width: 1020px) {
   .menu-btn { display: block; }
   .nav { position: absolute; inset: 100% 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px var(--gutter) 20px; }
   .nav a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--line); }
@@ -198,6 +198,31 @@ section { scroll-margin-top: 80px; }
 .foot .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between; }
 .foot p { font-size: 0.9rem; color: var(--muted); }
 
+/* Equipo */
+.docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 56px); max-width: 980px; }
+.doc { display: grid; gap: 18px; align-content: start; min-width: 0; }
+.doc img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: var(--radius); background: var(--mist); }
+.doc:first-child img { border-radius: 0 0 0 96px; }
+.doc:last-child img { border-radius: 0 96px 0 0; }
+.doc-body { display: grid; gap: 4px; padding-left: 18px; border-left: 1px solid var(--copper); }
+.doc h3 { font-size: var(--step-1); margin-bottom: 4px; }
+.doc-body p { color: var(--muted); font-size: 0.97rem; }
+.doc-body .doc-role { color: var(--ink); font-weight: 400; }
+.doc-reg { margin-top: 8px !important; font-variant-numeric: tabular-nums; }
+.doc-reg span { font-size: var(--step--1); letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper-text); margin-right: 8px; }
+@media (max-width: 640px) { .docs { grid-template-columns: minmax(0, 1fr); } .doc:first-child img, .doc:last-child img { border-radius: 0 0 0 64px; } }
+
+/* Redes */
+.social { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.social a, .map-link { text-decoration: none; }
+.social a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.social a:hover { color: var(--copper-text); }
+.social svg { width: 20px; height: 20px; color: var(--copper); flex: none; }
+.foot-social { display: flex; gap: 10px; }
+.foot-social a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); transition: border-color .2s, color .2s; }
+.foot-social a:hover { border-color: var(--copper); color: var(--copper-text); }
+.foot-social svg { width: 18px; height: 18px; }
+
 /* WhatsApp flotante */
 .wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--paper); box-shadow: 0 8px 24px rgba(0,0,0,.18); transition: background .2s; }
 .wa-float:hover { background: var(--copper); color: #fff; }
@@ -217,6 +242,8 @@ section { scroll-margin-top: 80px; }
       </g>
     </symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8L4 20Z M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-.9-.9.9c-1-.4-1.8-1.2-2.2-2.2l.9-.9-.9-1.8L9.5 9"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M14.5 21v-7.5h2.6l.4-3h-3V8.7c0-.9.3-1.5 1.6-1.5h1.5V4.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H9.2v3h2.5V21"/></symbol>
   </defs>
 </svg>
 
@@ -233,6 +260,7 @@ section { scroll-margin-top: 80px; }
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
       <a href="#clinica">La clínica</a>
+      <a href="#equipo">Equipo</a>
       <a href="#visita">Tu visita</a>
       <a href="#videos">Videos</a>
       <a href="#contacto">Contacto</a>
@@ -336,6 +364,39 @@ section { scroll-margin-top: 80px; }
     </div>
   </section>
 
+  <section class="section team" id="equipo">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Nuestro equipo</span>
+        <span class="head-bar" aria-hidden="true"></span>
+        <div>
+          <h2>Los doctores que te atienden</h2>
+          <p>Odontólogos colegiados en Honduras, en formación continua de especialidad.</p>
+        </div>
+      </div>
+      <div class="docs">
+        <article class="doc">
+          <img src="img/dr-brad-chavez.jpg" width="900" height="1125" loading="lazy" alt="Dr. Brad Chavez con uniforme azul marino y los brazos cruzados">
+          <div class="doc-body">
+            <h3>Dr. Brad Scully Chavez Padilla</h3>
+            <p class="doc-role">Odontólogo general · UNICAH</p>
+            <p>Estudiante de Ortodoncia y Ortopedia Maxilofacial</p>
+            <p class="doc-reg"><span>Colegiación</span> 20250844828P</p>
+          </div>
+        </article>
+        <article class="doc">
+          <img src="img/dra-maria-martinez.jpg" width="900" height="1125" loading="lazy" alt="Dra. María Fernanda Martinez sonriendo, con uniforme negro">
+          <div class="doc-body">
+            <h3>Dra. María Fernanda Martinez Ruiz</h3>
+            <p class="doc-role">Odontóloga general · UNICAH</p>
+            <p>Estudiante de Endodoncia</p>
+            <p class="doc-reg"><span>Colegiación</span> 20250744779P</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section visit" id="visita">
     <div class="wrap">
       <div class="head">
@@ -397,7 +458,7 @@ section { scroll-margin-top: 80px; }
           <div><dt>Teléfono y WhatsApp</dt><dd>(+504) 8792-6121</dd></div>
           <div><dt>Correo</dt><dd><span class="ph">[correo@axisdental.hn]</span></dd></div>
           <div><dt>Horario</dt><dd><span class="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 6:00 p. m.</span></span><span class="hours"><span>Sábado y domingo</span><span>10:00 a. m. – 3:00 p. m.</span></span></dd></div>
-          <div><dt>Redes</dt><dd><span class="ph">[@axisdentalstudio]</span></dd></div>
+          <div><dt>Redes</dt><dd><span class="social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-ig"/></svg>@axisldentalstudio</a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook de Axis Dental Studio"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></span></dd></div>
         </dl>
         <form class="form" id="cita-form" novalidate>
           <h3>Solicitar cita</h3>
@@ -433,6 +494,7 @@ section { scroll-margin-top: 80px; }
       <span class="brand-bar" aria-hidden="true"></span>
       <span class="brand-name"><b>AXIS</b><small>DENTAL STUDIO</small></span>
     </a>
+<div class="foot-social"><a href="https://instagram.com/axisldentalstudio" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a><a href="https://www.facebook.com/share/1FPayUqLoh/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a></div>
     <p>© <span id="year">2026</span> Axis Dental Studio · Torre Agalta, Blvd. Morazán, piso 10, local 1024 · Tegucigalpa · (+504) 8792-6121</p>
   </div>
 </footer>
