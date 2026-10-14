@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Axis Dental Studio</title>
-<meta name="description" content="Axis Dental Studio: estética dental, ortodoncia, implantes y odontología familiar en Torre Agalta, Tegucigalpa, Honduras.">
+<meta name="description" content="Axis Dental Studio: odontología general y estética con tecnología digital en Torre Agalta, Tegucigalpa, Honduras. Atendemos de lunes a domingo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap">
@@ -136,26 +136,14 @@ section { scroll-margin-top: 76px; }
 .glass li { font-size: 0.78rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: rgba(91,115,112,.12); color: var(--sage); }
 @media (max-width: 860px) { .glass-grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; } }
 
-/* Servicios en círculos */
-.circles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px) clamp(12px, 2vw, 24px); }
-.circle { display: grid; justify-items: center; text-align: center; gap: 10px; align-content: start; text-decoration: none; }
-.circle-icon { width: clamp(84px, 9vw, 108px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; display: grid; place-items: center; background: var(--shell); border: 1px solid #e8dccb; color: var(--gold-deep); transition: background .25s, transform .25s; }
-.circle:hover .circle-icon { background: #efe4d4; transform: translateY(-3px); }
-.circle-icon svg { width: 46%; height: 46%; }
-.circle h3 { font-size: 1.3rem; margin-top: 6px; }
-@media (max-width: 980px) { .circles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .circles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
 /* Bloque salvia redondeado: la clínica */
+#clinica { padding-block: clamp(56px, 7vw, 96px); }
 .panel { background: var(--sage); color: var(--white); border-radius: var(--r-lg); overflow: hidden; }
 .office { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: stretch; }
 .office-copy { display: grid; gap: 20px; align-content: center; padding: clamp(32px, 5vw, 72px); }
 .office-copy .eyebrow, .contact-info .eyebrow { color: var(--gold-light); }
 .office-copy h2 { font-size: var(--step-2); }
 .office-copy p { color: rgba(255,255,255,.9); }
-.ticks { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 12px; }
-.ticks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; align-items: start; color: rgba(255,255,255,.94); font-size: 0.95rem; }
-.ticks svg { width: 22px; height: 22px; color: var(--gold-light); margin-top: 2px; }
 .office-photo { margin: 0; min-height: 320px; }
 .office-photo img { width: 100%; height: 100%; object-fit: cover; }
 .duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); margin-top: clamp(14px, 2vw, 24px); }
@@ -166,7 +154,8 @@ section { scroll-margin-top: 76px; }
 
 /* Equipo: tarjetas sobre salvia claro (estilo Lumina) */
 .team-zone { background: linear-gradient(180deg, var(--white) 0 22%, var(--sage-soft) 22% 100%); }
-.docs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 40px); max-width: 920px; margin-inline: auto; }
+.docs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.6vw, 36px); max-width: 1160px; margin-inline: auto; }
+@media (max-width: 900px) { .docs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .doc { background: var(--white); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow); display: grid; align-content: start; }
 .doc-photo { background: linear-gradient(180deg, #dfe7e5, #c7d4d1); }
 .doc-photo img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; object-position: top; }
@@ -175,7 +164,7 @@ section { scroll-margin-top: 76px; }
 .doc .doc-role { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-deep); margin-top: 4px; }
 .doc-body p { color: var(--muted); font-size: 0.93rem; }
 .doc-body .doc-reg { margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
-@media (max-width: 640px) { .docs { grid-template-columns: minmax(0, 1fr); max-width: 440px; } }
+@media (max-width: 600px) { .docs { grid-template-columns: minmax(0, 1fr); max-width: 440px; } }
 
 /* Primera visita */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); counter-reset: step; }
@@ -238,6 +227,27 @@ section { scroll-margin-top: 76px; }
 .foot-social a:hover { border-color: var(--gold); color: var(--gold); }
 .foot-social svg { width: 18px; height: 18px; }
 
+/* Cuadrícula de servicios con letra en círculo */
+.services { background: var(--shell); }
+.svc-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.svc-cell { display: grid; justify-items: center; align-content: start; gap: 8px; text-align: center; text-decoration: none; padding: clamp(24px, 3vw, 40px) clamp(12px, 1.6vw, 22px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s; }
+.svc-cell:hover { background: var(--white); }
+.svc-letter { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--gold-deep); color: var(--gold-deep); font: 400 1.35rem/1 var(--font-display); margin-bottom: 8px; transition: background .25s, color .25s; }
+.svc-cell:hover .svc-letter { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.svc-cell h3 { font-size: 1.45rem; }
+.svc-cell p { font-size: 0.9rem; color: var(--muted); max-width: 22ch; }
+@media (max-width: 1020px) { .svc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .svc-cell h3 { font-size: 1.25rem; } }
+
+/* Por qué elegirnos: fondo oscuro */
+.why { background: #18211f; color: #f3ede4; }
+.why .eyebrow { color: var(--gold-light); }
+.why-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(28px, 5vw, 72px); }
+.why-list li { display: grid; gap: 10px; align-content: start; padding: 28px 0 32px; border-top: 1px solid rgba(201,162,116,.4); }
+.why-list h3 { font-size: var(--step-1); color: #fbf7f1; }
+.why-list p { color: rgba(243,237,228,.82); font-size: 0.97rem; }
+@media (max-width: 760px) { .why-list { grid-template-columns: minmax(0, 1fr); } }
+
 /* WhatsApp flotante */
 .wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--on-gold); box-shadow: 0 10px 28px -8px rgba(0,0,0,.35); transition: transform .2s; }
 .wa-float:hover { transform: scale(1.06); }
@@ -273,7 +283,7 @@ section { scroll-margin-top: 76px; }
     </button>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
-      <a href="#clinica">La clínica</a>
+      <a href="#por-que">Por qué Axis</a>
       <a href="#equipo">Equipo</a>
       <a href="#videos">Videos</a>
       <a href="#contacto">Contacto</a>
@@ -288,7 +298,7 @@ section { scroll-margin-top: 76px; }
     <div class="hero-copy wrap">
       <span class="eyebrow">Clínica dental · Torre Agalta, Tegucigalpa</span>
       <h1>Sonrisas seguras y saludables</h1>
-      <p class="hero-lead">Estética dental, ortodoncia, implantes y odontología familiar, en consultorios con luz natural y vista a la ciudad.</p>
+      <p class="hero-lead">Odontología general y estética con escáner intraoral, en consultorios con luz natural y vista a la ciudad. Atendemos de lunes a domingo.</p>
       <div class="hero-actions">
         <a class="btn btn-gold js-wa" href="#contacto"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar por WhatsApp</a>
         <a class="btn btn-light" href="#servicios">Ver servicios</a>
@@ -298,83 +308,94 @@ section { scroll-margin-top: 76px; }
   </section>
 
   <div class="strip">
-    <ul class="wrap" aria-label="Especialidades">
-      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Estética dental</li>
-      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Ortodoncia</li>
-      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Implantes</li>
+    <ul class="wrap" aria-label="Algunos de nuestros servicios">
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Blanqueamiento</li>
       <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Endodoncia</li>
-      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Odontología familiar</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Coronas</li>
+      <li><svg aria-hidden="true"><use href="#i-tooth"/></svg>Impresiones digitales</li>
     </ul>
   </div>
 
   <section class="section" id="nosotros">
     <div class="wrap center-head reveal" style="margin-bottom:0">
       <span class="eyebrow">Axis Dental Studio</span>
-      <h2>Odontología estética y familiar para niños y adultos</h2>
-      <p>Te atendemos en consultorios privados, con equipos digitales y un plan claro desde la primera cita. Sabes qué se hará, cuánto tiempo toma y cuánto cuesta antes de empezar.</p>
+      <h2>Odontología integral con tecnología digital</h2>
+      <p>Te atendemos en consultorios privados, con equipos digitales y un plan claro desde la primera cita. Sabés qué se hará, cuánto tiempo toma y cuánto cuesta antes de empezar.</p>
       <svg class="intro-mark" aria-hidden="true"><use href="#axis-mark"/></svg>
     </div>
   </section>
 
-  <section class="glass-zone" id="servicios" aria-label="Servicios destacados">
+  <section class="glass-zone" aria-label="Servicios destacados">
     <div class="wrap">
       <div class="glass-grid">
         <article class="glass reveal">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M38 6v7M34.5 9.5h7M41 17v3M39.5 18.5h3"/></svg>
-          <h3>Estética dental</h3>
-          <p>Sonrisas más blancas, parejas y naturales, diseñadas para tu rostro.</p>
-          <ul><li>Diseño de sonrisa</li><li>Carillas</li><li>Blanqueamiento</li></ul>
-          <a class="more" href="#contacto" data-servicio="Estética dental">Agendar valoración</a>
+          <h3>Blanqueamiento</h3>
+          <p>Una sonrisa más luminosa, con un tratamiento indicado para tus dientes.</p>
+          <a class="more" href="#contacto" data-servicio="Blanqueamiento">Agendar</a>
         </article>
         <article class="glass reveal">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24c6-5 30-5 36 0"/><rect x="10" y="18" width="5" height="5" rx="1"/><rect x="18" y="16.5" width="5" height="5" rx="1"/><rect x="26" y="16.5" width="5" height="5" rx="1"/><rect x="34" y="18" width="5" height="5" rx="1"/><path d="M8 32c7 4 25 4 32 0"/></svg>
-          <h3>Ortodoncia</h3>
-          <p>Alineamos tus dientes y tu mordida con la opción que mejor va contigo.</p>
-          <ul><li>Brackets</li><li>Alineadores invisibles</li><li>Niños</li></ul>
-          <a class="more" href="#contacto" data-servicio="Ortodoncia">Agendar valoración</a>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M20 20l1.5 8M28 20l-1.5 8"/></svg>
+          <h3>Endodoncia</h3>
+          <p>Salvamos tu pieza dental con tecnología especializada para tratamientos de conductos.</p>
+          <a class="more" href="#contacto" data-servicio="Endodoncia">Agendar</a>
         </article>
         <article class="glass reveal">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8c3-2 6-1 9 1 3-2 6-3 9-1 4 3 3 8 1 11H14c-2-3-3-8 1-11Z"/><path d="M17 23h14M18 27h12M19 31h10M20 35h8M22 39h4"/></svg>
-          <h3>Implantes</h3>
-          <p>Reemplazo fijo y natural para piezas perdidas, con planificación digital.</p>
-          <ul><li>Implantes</li><li>Coronas y puentes</li><li>Rehabilitación</li></ul>
-          <a class="more" href="#contacto" data-servicio="Implantes">Agendar valoración</a>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="10" width="32" height="22" rx="3"/><path d="M18 38h12M24 32v6"/><path d="M16 24c2-6 14-6 16 0"/><path d="M19 22v3M24 20.5v4.5M29 22v3"/></svg>
+          <h3>Impresiones digitales</h3>
+          <p>Sin moldes: registramos tu boca con escáner intraoral Shining 3D.</p>
+          <a class="more" href="#contacto" data-servicio="Impresiones digitales">Agendar</a>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="todos">
+  <section class="section services" id="servicios" aria-labelledby="todos">
     <div class="wrap">
       <div class="center-head reveal">
-        <span class="eyebrow">Servicios</span>
-        <h2 id="todos">Cuidado dental completo</h2>
-        <p>Tratamientos para cada etapa, desde la limpieza de rutina hasta una urgencia.</p>
+        <span class="eyebrow">Cuidado integral</span>
+        <h2 id="todos">Nuestros servicios</h2>
       </div>
-      <div class="circles">
-        <a class="circle reveal" href="#contacto" data-servicio="Estética dental">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 26c5 6 27 6 32 0"/><path d="M10 22c4-3 24-3 28 0"/><path d="M15 21v4M20 20v5M25 20v5M30 20v5M35 21v4"/></svg></span>
-          <h3>Diseño de sonrisa</h3><span class="more">Agendar</span>
+      <div class="svc-grid">
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Evaluación">
+          <span class="svc-letter" aria-hidden="true">E</span>
+          <h3>Evaluación</h3><p>Diagnóstico claro de tu salud bucal</p>
         </a>
-        <a class="circle reveal" href="#contacto" data-servicio="Estética dental">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14c-3-3-7-3-9-1-3 3-2 8-1 11 1 3 2 6 2.5 10 .3 2 2.5 2 3 0l1.5-5h6l1.5 5c.5 2 2.7 2 3 0 .5-4 1.5-7 2.5-10 1-3 2-8-1-11-2-2-6-2-9 1Z"/><path d="M36 5l1.2 3 3 1.2-3 1.2L36 13.5l-1.2-3.1-3-1.2 3-1.2Z"/></svg></span>
-          <h3>Blanqueamiento</h3><span class="more">Agendar</span>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Limpieza">
+          <span class="svc-letter" aria-hidden="true">L</span>
+          <h3>Limpieza</h3><p>Higiene profesional para encías sanas</p>
         </a>
-        <a class="circle reveal" href="#contacto" data-servicio="Valoración general">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 12c-3-3-8-4-11-2-4 3-3 9-1 13 2 3 2 7 3 12 .5 3 3 3 3.5 0l2-7h7l2 7c.5 3 3 3 3.5 0 1-5 1-9 3-12 2-4 3-10-1-13-3-2-8-1-11 2Z"/><path d="M20 20l1.5 8M28 20l-1.5 8"/></svg></span>
-          <h3>Endodoncia</h3><span class="more">Agendar</span>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Blanqueamiento">
+          <span class="svc-letter" aria-hidden="true">B</span>
+          <h3>Blanqueamiento</h3><p>Una sonrisa más luminosa</p>
         </a>
-        <a class="circle reveal" href="#contacto" data-servicio="Valoración general">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="18" r="8"/><path d="M20.5 19.5c1.8 1.8 5.2 1.8 7 0"/><path d="M12 40c1-7 6-11 12-11s11 4 12 11"/></svg></span>
-          <h3>Odontopediatría</h3><span class="more">Agendar</span>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Restauración">
+          <span class="svc-letter" aria-hidden="true">R</span>
+          <h3>Restauración</h3><p>Rellenos que cuidan tu diente</p>
         </a>
-        <a class="circle reveal" href="#contacto" data-servicio="Limpieza">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38l18-18"/><path d="M26 14l8 8"/><path d="M28 12l2-2 8 8-2 2"/><path d="M31 9v-3M35 9l2-2M39 13h3"/></svg></span>
-          <h3>Limpieza</h3><span class="more">Agendar</span>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Extracción">
+          <span class="svc-letter" aria-hidden="true">X</span>
+          <h3>Extracción</h3><p>Procedimiento seguro y sin prisa</p>
         </a>
-        <a class="circle reveal" href="#contacto" data-servicio="Urgencia">
-          <span class="circle-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 8h10v11h11v10H29v11H19V29H8V19h11Z"/></svg></span>
-          <h3>Urgencias</h3><span class="more">Agendar</span>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Endodoncia">
+          <span class="svc-letter" aria-hidden="true">En</span>
+          <h3>Endodoncia</h3><p>Salvamos tu pieza dental</p>
+        </a>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Sellantes">
+          <span class="svc-letter" aria-hidden="true">S</span>
+          <h3>Sellantes</h3><p>Protección contra las caries</p>
+        </a>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Coronas">
+          <span class="svc-letter" aria-hidden="true">C</span>
+          <h3>Coronas</h3><p>Fuerza y estética para el diente</p>
+        </a>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Prótesis removible">
+          <span class="svc-letter" aria-hidden="true">P</span>
+          <h3>Prótesis removible</h3><p>Recuperá tu masticación</p>
+        </a>
+        <a class="svc-cell reveal" href="#contacto" data-servicio="Impresiones digitales">
+          <span class="svc-letter" aria-hidden="true">D</span>
+          <h3>Impresiones digitales</h3><p>Sin moldes, más comodidad</p>
         </a>
       </div>
     </div>
@@ -384,22 +405,38 @@ section { scroll-margin-top: 76px; }
     <div class="wrap">
       <div class="panel office reveal">
         <div class="office-copy">
-          <span class="eyebrow">Nuestra clínica</span>
-          <h2>Un espacio pensado para que te sientas tranquilo</h2>
-          <p>Estamos en el piso 10 de Torre Agalta, con consultorios privados y vista a la ciudad.</p>
-          <ul class="ticks">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Consultorios privados con luz natural</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Radiografía digital y tecnología intraoral</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Material esterilizado y superficies protegidas en cada cita</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plan de tratamiento y presupuesto por escrito</li>
-          </ul>
+          <span class="eyebrow">Nuestro espacio</span>
+          <h2>Tecnología y trato cercano</h2>
+          <p>Estamos en el piso 10 de Torre Agalta, en un ambiente moderno, limpio y ordenado, con consultorios privados y vista a la ciudad.</p>
+          <a class="btn btn-gold js-wa" href="#contacto" style="justify-self:start">Agendá tu cita</a>
         </div>
         <figure class="office-photo"><img src="img/consultorio.jpg" width="1800" height="1200" loading="lazy" alt="Consultorio de Axis con sillón dental, monitor, lavamanos dorado y el logo de la clínica en la pared"></figure>
       </div>
       <div class="duo">
         <figure class="reveal"><img src="img/equipo-radiografia.jpg" width="1100" height="1650" loading="lazy" alt="Dos miembros del equipo de Axis tomando una radiografía digital a una paciente"><figcaption>Radiografía digital</figcaption></figure>
-        <figure class="reveal"><img src="img/paciente-sonrisa.jpg" width="1100" height="1650" loading="lazy" alt="Paciente sonriendo en el sillón mientras la doctora la revisa"><figcaption>Revisión intraoral</figcaption></figure>
+        <figure class="reveal"><img src="img/paciente-sonrisa.jpg" width="1100" height="1650" loading="lazy" alt="Paciente sonriendo en el sillón mientras la doctora la revisa"><figcaption>Cámara intraoral</figcaption></figure>
       </div>
+    </div>
+  </section>
+
+  <section class="section why" id="por-que">
+    <div class="wrap">
+      <div class="center-head reveal">
+        <span class="eyebrow">Por qué Axis</span>
+        <h2>¿Por qué elegir Axis Dental Studio?</h2>
+      </div>
+      <ul class="why-list">
+          <li class="reveal"><h3>Tecnología odontológica avanzada</h3><p>Contamos con un escáner intraoral Shining 3D para obtener registros digitales precisos y ofrecer una experiencia más cómoda durante los tratamientos indicados.</p></li>
+          <li class="reveal"><h3>Endodoncia con tecnología especializada</h3><p>Integramos tecnología que optimiza el trabajo clínico y nos permite realizar tratamientos de conductos con mayor eficiencia y precisión.</p></li>
+          <li class="reveal"><h3>Entendé tu salud bucal</h3><p>Nuestras cámaras intraorales te permiten visualizar tu boca en tiempo real y comprender mejor tu diagnóstico y las necesidades de tu tratamiento.</p></li>
+          <li class="reveal"><h3>Materiales de calidad</h3><p>Trabajamos con materiales odontológicos seleccionados para ofrecer tratamientos confiables y resultados acordes con las necesidades de cada paciente.</p></li>
+          <li class="reveal"><h3>Protocolos de esterilización rigurosos</h3><p>La limpieza, desinfección y esterilización del instrumental forman parte esencial de nuestros protocolos para proteger tu salud.</p></li>
+          <li class="reveal"><h3>Atención en cada detalle</h3><p>Desde una coffee station de cortesía hasta un trato cercano, cuidamos cada aspecto de tu visita para que te sintás bienvenido desde el primer momento.</p></li>
+          <li class="reveal"><h3>Profesionales en constante actualización</h3><p>Nuestro compromiso con la educación continua nos permite mantenernos al día con nuevas técnicas, conocimientos y avances en odontología.</p></li>
+          <li class="reveal"><h3>Un espacio pensado para tu comodidad</h3><p>Un ambiente moderno, elegante, limpio y ordenado, diseñado para que tu experiencia odontológica sea agradable.</p></li>
+          <li class="reveal"><h3>Ubicación conveniente y segura</h3><p>Nos encontrás en una torre con seguridad y parqueo, para que llegar a tu cita sea más cómodo y tranquilo.</p></li>
+          <li class="reveal"><h3>Horarios que se adaptan a vos</h3><p>Atendemos de lunes a domingo para brindarte mayor flexibilidad al momento de programar tu cita y encontrar un espacio en tu agenda.</p></li>
+      </ul>
     </div>
   </section>
 
@@ -429,6 +466,15 @@ section { scroll-margin-top: 76px; }
             <p class="doc-reg">Colegiación 20250744779P</p>
           </div>
         </article>
+        <article class="doc reveal">
+          <div class="doc-photo"><img src="img/dra-any-lopez.jpg" width="900" height="1126" loading="lazy" alt="Dra. Any Mariela López Rubio sonriendo, con uniforme verde claro, en el consultorio"></div>
+          <div class="doc-body">
+            <h3>Dra. Any Mariela López Rubio</h3>
+            <p class="doc-role">Odontóloga general · UNITEC</p>
+            <p>Odontología mínimamente invasiva</p>
+            <p class="doc-reg">Colegiación 202607324P</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -440,7 +486,7 @@ section { scroll-margin-top: 76px; }
         <h2>Así funciona, paso a paso</h2>
       </div>
       <ol class="steps">
-        <li class="reveal"><h3>Valoración</h3><p>Revisamos tu boca, tomamos radiografías si hacen falta y escuchamos lo que quieres lograr.</p></li>
+        <li class="reveal"><h3>Valoración</h3><p>Revisamos tu boca, tomamos radiografías si hacen falta y escuchamos lo que querés lograr.</p></li>
         <li class="reveal"><h3>Plan de tratamiento</h3><p>Te presentamos las opciones, el número de citas y el presupuesto por escrito.</p></li>
         <li class="reveal"><h3>Tratamiento y control</h3><p>Realizamos el tratamiento y te damos seguimiento para que el resultado dure.</p></li>
       </ol>
@@ -451,8 +497,8 @@ section { scroll-margin-top: 76px; }
     <div class="wrap">
       <div class="center-head reveal">
         <span class="eyebrow">Videos</span>
-        <h2>Conócenos antes de tu cita</h2>
-        <p>Recorre la clínica y escucha a quienes ya nos visitaron.</p>
+        <h2>Conocenos antes de tu cita</h2>
+        <p>Recorré la clínica y escuchá a quienes ya nos visitaron.</p>
       </div>
       <div class="reels">
         <figure class="reel">
@@ -465,7 +511,7 @@ section { scroll-margin-top: 76px; }
         </figure>
         <figure class="reel">
           <video controls playsinline preload="metadata" poster="img/poster-conoce-axis.jpg"><source src="video/conoce-axis.mp4" type="video/mp4"></video>
-          <figcaption><b>Conoce Axis</b><span>Cómo trabajamos</span></figcaption>
+          <figcaption><b>Conocé Axis</b><span>Cómo trabajamos</span></figcaption>
         </figure>
       </div>
     </div>
@@ -476,7 +522,7 @@ section { scroll-margin-top: 76px; }
       <div class="panel contact-panel reveal">
         <div class="contact-info">
           <span class="eyebrow">Contacto</span>
-          <h2>Agenda tu cita</h2>
+          <h2>Agendá tu cita</h2>
           <dl class="info">
             <div><dt>Dónde estamos</dt><dd>Torre Agalta, Blvd. Morazán<br>Piso 10, Local 1024<br>Tegucigalpa, Honduras<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Torre+Agalta+Boulevard+Moraz%C3%A1n+Tegucigalpa" target="_blank" rel="noopener">Ver en Google Maps →</a></dd></div>
             <div><dt>Teléfono y WhatsApp</dt><dd>(+504) 8792-6121</dd></div>
@@ -495,14 +541,14 @@ section { scroll-margin-top: 76px; }
             <div class="row">
               <div class="field"><label for="f-servicio">Servicio</label>
                 <select id="f-servicio" name="servicio">
-                  <option>Valoración general</option><option>Estética dental</option><option>Ortodoncia</option><option>Implantes</option><option>Limpieza</option><option>Urgencia</option>
+                  <option>Evaluación</option><option>Limpieza</option><option>Blanqueamiento</option><option>Restauración</option><option>Extracción</option><option>Endodoncia</option><option>Sellantes</option><option>Coronas</option><option>Prótesis removible</option><option>Impresiones digitales</option><option>Otro</option>
                 </select></div>
               <div class="field"><label for="f-horario">Horario preferido</label>
                 <select id="f-horario" name="horario"><option>Mañana</option><option>Tarde</option><option>Fin de semana</option></select></div>
             </div>
             <div class="field"><label for="f-msg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje"></textarea></div>
             <button class="btn btn-gold" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preparar mensaje</button>
-            <p class="note" id="form-note">Armamos el mensaje con tus datos para que lo envíes por WhatsApp.</p>
+            <p class="note" id="form-note">Armamos el mensaje con tus datos para que lo enviés por WhatsApp.</p>
             <div class="form-done" id="form-done" hidden aria-live="polite">
               <p id="form-done-text"></p>
               <a class="btn btn-line" id="form-wa-link" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
@@ -526,7 +572,7 @@ section { scroll-margin-top: 76px; }
   </div>
 </footer>
 
-<a class="wa-float js-wa" href="#contacto" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="wa-float js-wa" href="#contacto" aria-label="Escribinos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
 <script>
 /* Número de WhatsApp: código de país + número, sin espacios ni + */
@@ -590,7 +636,7 @@ form.addEventListener("submit", function (e) {
   var nombre = form.nombre.value.trim();
   var tel = form.telefono.value.trim();
   if (!nombre || !tel) {
-    document.getElementById("form-note").textContent = "Escribe tu nombre y teléfono para preparar el mensaje.";
+    document.getElementById("form-note").textContent = "Escribí tu nombre y teléfono para preparar el mensaje.";
     (nombre ? form.telefono : form.nombre).focus();
     return;
   }
